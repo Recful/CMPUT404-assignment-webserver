@@ -33,6 +33,7 @@ class MyWebServer(socketserver.BaseRequestHandler):
         self.data = self.request.recv(1024).strip()
         print ("Got a request of: %s\n" % self.data)
         self.request.sendall(bytearray("OK",'utf-8'))
+        print("hellos")
 
 if __name__ == "__main__":
     HOST, PORT = "localhost", 8080
